@@ -7,7 +7,7 @@ This project is a Book store, developed using React.
 - VScode
 
 ## Live Demo
-[Book store demo]() 
+[Book store demo](https://614c6a5f0a055e0008c4b597--inspiring-thompson-d36105.netlify.app/) 
 
 ## Getting Started
 
