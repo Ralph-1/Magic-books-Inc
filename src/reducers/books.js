@@ -1,1 +1,3 @@
-export const BOOKS = { type: 'ADD_BOOK'}
+const BOOKS = { type: 'ADD_BOOK' };
+
+export default BOOKS;
