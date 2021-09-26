@@ -1,17 +1,17 @@
 import React from 'react';
-import categories from '../categories/categories';
+import { categories } from '../categories/categories';
 
 export default function BooksForm() {
   return (
     <div>
       <form>
         <div>
-          <span>Book Name: </span>
+          <span>Name: </span>
           <br />
-          <input type="text" name="title" id="title" placeholder="Book Name..." />
+          <input type="text" name="title" id="title" placeholder="enter book name" />
         </div>
         <div>
-          <span>Book Category: </span>
+          <span>Category: </span>
           <br />
           <select name="category" id="category">
             {categories.map((category) => (
@@ -21,7 +21,7 @@ export default function BooksForm() {
             ))}
           </select>
         </div>
-        <button type="submit" className="btn">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
