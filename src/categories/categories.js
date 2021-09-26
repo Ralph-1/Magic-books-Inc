@@ -5,7 +5,7 @@ const categories = [
   'Horror',
   'Kids',
   'Learning',
-  'Sci-Fi'
-]
+  'Sci-Fi',
+];
 
 export default categories;
