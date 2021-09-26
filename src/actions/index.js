@@ -1,11 +1,13 @@
-const CREATE_BOOK = (book) => ({
+import { CREATE_BOOK, REMOVE_BOOK } from '../actions';
+
+const createBook = (book) => ({
   type: CREATE_BOOK,
-  payLoad: book,
+  payload: book,
 });
 
-const REMOVE_BOOK = (book) => ({
+const removeBook = (id) => ({
   type: REMOVE_BOOK,
-  payLoad: book,
+  payload: id,
 });
 
-export { CREATE_BOOK, REMOVE_BOOK };
+export { createBook, removeBook };

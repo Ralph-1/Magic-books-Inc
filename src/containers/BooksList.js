@@ -15,7 +15,10 @@ function BooksList({ books }) {
   );
 }
 
-const mapStateToProps = (state) => ({ books: state.books });
+const mapStateToProps = (state) => {
+  const { books } = state;
+  return books;
+};
 
 BooksList.defaultProps = {
   books: [],
