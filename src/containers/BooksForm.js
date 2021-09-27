@@ -22,12 +22,13 @@ function BooksForm({ createBook }) {
     const { title, category } = values;
 
     createBook({
-      id: Math.floor(Math.random() * 11).toString(),
+      id: Math.floor(Math.random() * 1111).toString(),
       title,
       category,
     });
 
     setValues({
+      id: '',
       title: '',
       cartegory: '',
     });
