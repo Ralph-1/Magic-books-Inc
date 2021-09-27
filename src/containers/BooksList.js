@@ -3,16 +3,22 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import * as actions from '../actions/index';
+import CategoryFilter from '../components/CategoryFilter';
 
-const BooksList = ({ books, removeBook }) => {
+const BooksList = ({ books, removeBook, filter }) => {
   const handleRemoveBook = (e, book) => {
     e.preventDefault();
     removeBook(book.id);
   };
 
+  const handleFilterChange = (fil) => {
+    filter(fil);
+  };
+
   return (
     <div>
       <table>
+        <CategoryFilter onSelectHandler={handleFilterChange} />
         <thead>
           <tr>
             <th>Id</th>
@@ -43,6 +49,7 @@ BooksList.defaultProps = {
 BooksList.propTypes = {
   books: PropTypes.oneOfType([PropTypes.array]),
   removeBook: PropTypes.func.isRequired,
+  filter: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, actions)(BooksList);

@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { categories } from '../categories/Categories';
 import { createBook } from '../actions/index';
 
-const BooksForm = ({ createBook }) => {
-  const categories = ['Action', 'Biography', 'History',
-    'Horror', 'Kids', 'Learning', 'Sci-Fi'];
-
+function BooksForm({ createBook }) {
   const [values, setValues] = useState({
     id: '',
     title: '',
@@ -33,15 +31,16 @@ const BooksForm = ({ createBook }) => {
     setValues({
       id: '',
       title: '',
-      cartegory: 'Action',
+      category: 'Action',
     });
   };
 
   return (
     <div>
+      <h3>Add New Book</h3>
       <form onSubmit={handleSubmit}>
         <div>
-          <span>Name: </span>
+          <span>Title: </span>
           <br />
           <input type="text" name="title" id="title" placeholder="enter book name" value={values.title} onChange={handleChange} />
         </div>
@@ -60,7 +59,7 @@ const BooksForm = ({ createBook }) => {
       </form>
     </div>
   );
-};
+}
 
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
