@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Book({ book, handleRemove }) {
+const Book = ({ book, handleRemove }) => {
   const { id, title, category } = book;
 
   return (
@@ -12,7 +12,7 @@ export default function Book({ book, handleRemove }) {
       <td><button type="button" onClick={(e) => handleRemove(e, book)}>Remove Book</button></td>
     </tr>
   );
-}
+};
 
 Book.defaultProps = {
   book: {},
@@ -26,3 +26,5 @@ Book.propTypes = {
   }),
   handleRemove: PropTypes.func.isRequired,
 };
+
+export default Book;

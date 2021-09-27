@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { createBook } from '../actions/index';
 
-function BooksForm({ createBook }) {
+const BooksForm = ({ createBook }) => {
   const categories = ['Action', 'Biography', 'History',
     'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -60,7 +60,7 @@ function BooksForm({ createBook }) {
       </form>
     </div>
   );
-}
+};
 
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,
