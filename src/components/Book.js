@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function Book({ book }) {
+const Book = ({ book }) => {
   const { id, title, category } = book;
 
   return (
@@ -11,7 +11,7 @@ export default function Book({ book }) {
       <td>{category}</td>
     </tr>
   );
-}
+};
 
 Book.defaultProps = {
   book: {},
@@ -24,3 +24,5 @@ Book.propTypes = {
     category: PropTypes.string,
   }),
 };
+
+export default Book;

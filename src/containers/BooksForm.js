@@ -1,7 +1,9 @@
 import React from 'react';
-import { categories } from '../categories/categories';
 
-export default function BooksForm() {
+const BooksForm = () => {
+  const categories = ['Action', 'Biography', 'History',
+    'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
   return (
     <div>
       <form>
@@ -25,4 +27,6 @@ export default function BooksForm() {
       </form>
     </div>
   );
-}
+};
+
+export default BooksForm;

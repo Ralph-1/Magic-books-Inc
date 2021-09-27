@@ -3,17 +3,15 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 
-function BooksList({ books }) {
-  return (
-    <div>
-      <table>
-        <tbody>
-          {books.map((book) => (<Book book={book} key={book.id} />))}
-        </tbody>
-      </table>
-    </div>
-  );
-}
+const BooksList = ({ books }) => (
+  <div>
+    <table>
+      <tbody>
+        {books.map((book) => (<Book book={book} key={book.id} />))}
+      </tbody>
+    </table>
+  </div>
+);
 
 const mapStateToProps = (state) => ({ books: state.books });
 
