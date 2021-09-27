@@ -33,7 +33,7 @@ const BooksForm = ({ createBook }) => {
     setValues({
       id: '',
       title: '',
-      cartegory: Action,
+      cartegory: 'Action',
     });
   };
 
