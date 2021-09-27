@@ -1,4 +1,4 @@
-import { CHANGE_FILTER } from '../Actions';
+import { CHANGE_FILTER } from '../actions';
 
 const catfilter = (state = 'All', action) => {
   switch (action.type) {

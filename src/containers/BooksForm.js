@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { categories } from '../categories/Categories';
 import { createBook } from '../actions/index';
 
-function BooksForm({ createBook }) {
+const BooksForm = ({ createBook }) => {
   const [values, setValues] = useState({
     id: '',
     title: '',
@@ -59,7 +59,7 @@ function BooksForm({ createBook }) {
       </form>
     </div>
   );
-}
+};
 
 BooksForm.propTypes = {
   createBook: PropTypes.func.isRequired,

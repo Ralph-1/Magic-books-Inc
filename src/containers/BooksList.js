@@ -17,8 +17,11 @@ const BooksList = ({ books, removeBook, filter }) => {
 
   return (
     <div>
+      <br />
+      <span>Filter</span>
+      <CategoryFilter onSelectHandler={handleFilterChange} />
+      <br />
       <table>
-        <CategoryFilter onSelectHandler={handleFilterChange} />
         <thead>
           <tr>
             <th>Id</th>
@@ -38,8 +41,15 @@ const BooksList = ({ books, removeBook, filter }) => {
 };
 
 const mapStateToProps = (state) => {
-  const { books, removeBook } = state;
-  return { books, removeBook };
+  const {
+    books, removeBook, catfilter, filter,
+  } = state;
+  if (catfilter !== 'All' || '') {
+    const result = books.filter((book) => book.category === catfilter);
+    return { books: result };
+  }
+
+  return { books, removeBook, filter };
 };
 
 BooksList.defaultProps = {
