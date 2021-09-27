@@ -19,14 +19,12 @@ const initialState = [
 ];
 
 const books = (state = initialState, action) => {
-  const { type, book } = action;
-
+  const { type, payload } = action;
   switch (type) {
     case CREATE_BOOK:
-      return [...state, book];
-
+      return [...state, payload];
     case REMOVE_BOOK:
-      return state.filter((Book) => Book.id !== book);
+      return state.filter((Book) => Book.id !== payload);
     default:
       return state;
   }

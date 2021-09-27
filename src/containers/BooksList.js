@@ -5,7 +5,7 @@ import Book from '../components/Book';
 import * as actions from '../actions/index';
 
 function BooksList({ books, removeBook }) {
-  const handleRemove = (e, book) => {
+  const handleRemoveBook = (e, book) => {
     e.preventDefault();
     removeBook(book.id);
   };
@@ -22,7 +22,9 @@ function BooksList({ books, removeBook }) {
           </tr>
         </thead>
         <tbody>
-          {books.map((book) => (<Book book={book} key={book.id} handleRemove={handleRemove} />))}
+          {books.map((book) => (
+            <Book book={book} key={book.id} handleRemove={handleRemoveBook} />
+          ))}
         </tbody>
       </table>
     </div>

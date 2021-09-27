@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { categories } from '../categories/categories';
 import { createBook } from '../actions/index';
 
 function BooksForm({ createBook }) {
+  const categories = ['Action', 'Biography', 'History',
+    'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+
   const [values, setValues] = useState({
+    id: '',
     title: '',
     category: 'Action',
   });
@@ -40,7 +43,7 @@ function BooksForm({ createBook }) {
         <div>
           <span>Name: </span>
           <br />
-          <input type="text" name="title" id="title" placeholder="enter book name" value={values.title} onChange="handleChange" />
+          <input type="text" name="title" id="title" placeholder="enter book name" value={values.title} onChange={handleChange} />
         </div>
         <div>
           <span>Category: </span>
@@ -53,7 +56,7 @@ function BooksForm({ createBook }) {
             ))}
           </select>
         </div>
-        <button type="submit" onSubmit={handleSubmit}>Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
