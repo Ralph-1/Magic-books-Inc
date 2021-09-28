@@ -1,4 +1,5 @@
 import '../App.css';
+import Container from 'react-bootstrap/Container';
 import BooksList from '../containers/BooksList';
 import BooksForm from '../containers/BooksForm';
 import Navbar from './NavBar';
@@ -6,8 +7,10 @@ import Navbar from './NavBar';
 const App = () => (
   <div className="App">
     <Navbar />
-    <BooksForm />
-    <BooksList />
+    <Container>
+      <BooksForm />
+      <BooksList />
+    </Container>
   </div>
 );
 
