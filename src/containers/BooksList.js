@@ -18,8 +18,6 @@ const BooksList = ({ books, removeBook, filter }) => {
   return (
     <div className="book-list">
       <div className="filter-container">
-        <span>Filter Categories:</span>
-        <br />
         <CategoryFilter onSelectHandler={handleFilterChange} />
       </div>
       <div className="book-cards">

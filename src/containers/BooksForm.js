@@ -42,17 +42,17 @@ const BooksForm = ({ createBook }) => {
       <h3 className="mt-4 mb-3">Add New Book</h3>
       <Form onSubmit={handleSubmit} className="add-book-form d-flex mt-5">
         <Form.Group className="addbook-input">
-          <Form.Control type="input" className="title-input" name="title" id="title" placeholder="enter book name" value={values.title} onChange={handleChange} />
+          <Form.Control type="input" className="title-input" name="title" id="title" placeholder="Enter book name" value={values.title} onChange={handleChange} />
         </Form.Group>
         <div className="addbook-right">
-          <Form.Control as="select" className="cat-input" name="category" id="category" value={values.category} onChange={handleChange}>
+          <Form.Control as="select" className="cat-input" name="category" id="category" value={values.category} onChange={handleChange} size="10">
             {categories.map((category) => (
               <option key={`${category}`} value={category}>
                 {category}
               </option>
             ))}
           </Form.Control>
-          <Button className="addbook-btn" type="submit">Submit</Button>
+          <Button className="addbook-btn" type="submit">Add Book</Button>
         </div>
       </Form>
     </div>

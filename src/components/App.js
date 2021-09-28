@@ -8,8 +8,8 @@ const App = () => (
   <div className="App">
     <Navbar />
     <Container>
-      <BooksForm />
       <BooksList />
+      <BooksForm />
     </Container>
   </div>
 );
